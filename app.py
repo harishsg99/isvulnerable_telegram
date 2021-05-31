@@ -23,9 +23,9 @@ def echo_all(message):
     elif(b[0] == "/website"):
         x = b[1]
         scanner = Scanner(threads=20)
-        scanner.put("http://example.com/?post=1")
-        scanner.run()
+        scanner.put(x)
+        y = scanner.run()
         print(x)
-        bot.reply_to(message, "SID added")
+        bot.reply_to(message, str(y))
    
 bot.polling()
